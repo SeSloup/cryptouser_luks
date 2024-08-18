@@ -35,6 +35,8 @@
 
 *В качестве ответа пришлите снимки экрана с поэтапным выполнением задания.*
 
+[Ход выполнения](https://github.com/SeSloup/cryptouser_luks/blob/main/luks)
+
 [Снимки с ходом выполнения работы](https://github.com/SeSloup/cryptouser_luks/tree/main/screens/luks_steps)
 
 -------------------------------------------------------------
