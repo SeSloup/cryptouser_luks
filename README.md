@@ -18,7 +18,7 @@
 ![01](https://github.com/SeSloup/cryptouser_luks/blob/main/screens/ecryptfs/01.png)  
 
 `файлы до`
-![03](https://github.com/SeSloup/cryptouser_luks/blob/main/screens/ecryptfs/03.png  
+![03](https://github.com/SeSloup/cryptouser_luks/blob/main/screens/ecryptfs/03.png)
 
 `файлы после`
 ![06](https://github.com/SeSloup/cryptouser_luks/blob/main/screens/ecryptfs/06.png)  
