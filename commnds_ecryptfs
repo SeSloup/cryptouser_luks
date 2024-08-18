@@ -1,0 +1,23 @@
+sudo namp -sn 192.168.2.0/24
+
+sudo apt-get install ecryptfs-utils
+
+sudo adduser cryptouser
+sudo usermod -aG sudo cryptouser
+
+echo "cryptouser ALL=(ALL:ALL) ALL" >> /etc/sudoers
+
+
+ls -lah /home/ | grep crypto
+
+sudo modprobe ecryptfs
+sudo ecryptfs-setup-private
+sudo -s
+ecryptfs-migrate-home -u cryptouser
+
+ecryptfs-mount-private
+ecryptfs-unwrap-passfrase
+ecryptfs-umount-private
+
+#sudo mount -t ecryptfs /home/cryptouser/.Private /home/cryptouser/Private 
+

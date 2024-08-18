@@ -1,0 +1,55 @@
+#1. create empty virtualbox disk
+
+
+lsblk
+
+
+# https://1cloud.ru/help/security/sozdanie-shifrovannogo-razdela-luks-na-linux
+
+## prepare partition
+parted /dev/sdb
+(parted) mklabel gpt
+(parted) mkpart primary 1 -1
+quit
+
+##createing key
+sudo dd if=/dev/urandom of=/home/kali/keys//secret_luks.secret bs=1024 count=2
+
+sudo chmod 0400 /home/kali/keys/secret_luks.secret
+
+##inicialyse luks-partition
+sudo apt-get install cryptsetup
+cryptsetup luksFormat /dev/sdb /home/kali/keys/secret_luks.secret
+
+cryptsetup luksAddKey /dev/sdb /home/kali/keys/secret_luks.secret --key-file=/home/kali/keys/secret_luks.secret
+
+
+cryptsetup luksOpen /dev/sdb secret --key-file=/home/kali/keys/secret_luks.secret
+
+###now secret is a name of /dev/sdb for luks
+
+ls /dev/mapper
+
+cryptsetup resize secret --key-file=/home/kali/keys/secret_luks.secret
+sudo mkfs.ext4 /dev/mapper/secret 
+cryptsetup -v status secret
+
+cryptsetup luksDump /dev/sdb --key-file=/home/kali/keys/secret_luks.secret
+
+## mounting luks partition
+sudo mkdir /mnt/luks_secret
+sudo chmod 755 /mnt/luks_secret
+
+sudo mount /dev/mapper/secret /mnt/luks_secret 
+
+##automount
+
+sudo su
+ls -l /dev/disk/by-uuid/ 
+export UUID="<UUID>"
+
+echo "secret UUID=${UUID} /home/kali/keys/secret_luks.secret luks" >> /etc/crypttab
+
+echo "/dev/mapper/secret /mnt/luks_secret auto" >> /etc/fstab
+exit
+sudo mount -a
