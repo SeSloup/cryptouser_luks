@@ -10,8 +10,19 @@
 3. Зашифруйте домашний каталог пользователя с помощью eCryptfs.
 
 
-*В качестве ответа  пришлите снимки экрана домашнего каталога пользователя с исходными и зашифрованными данными.*  
+*В качестве ответа  пришлите снимки экрана домашнего каталога пользователя с исходными и зашифрованными данными.* 
 
+[подготовим инфраструктуру (создадим пользователя)](https://github.com/SeSloup/cryptouser_luks/blob/main/commnds_ecryptfs)
+
+`шифруем папку пользователя`
+![01](https://github.com/SeSloup/cryptouser_luks/blob/main/screens/ecryptfs/01.png)
+
+`файлы до`
+![03](https://github.com/SeSloup/cryptouser_luks/blob/main/screens/ecryptfs/03.png)
+`файлы после`
+![06](https://github.com/SeSloup/cryptouser_luks/blob/main/screens/ecryptfs/06.png)
+
+[полный ход шифрования](https://github.com/SeSloup/cryptouser_luks/tree/main/screens/ecryptfs)
 
 
 ### Задание 2
@@ -22,6 +33,7 @@
 
 *В качестве ответа пришлите снимки экрана с поэтапным выполнением задания.*
 
+[Снимки с ходом выполнения работы](https://github.com/SeSloup/cryptouser_luks/tree/main/screens/luks_steps)
 
 -------------------------------------------------------------
 Спасибо за проверку!
