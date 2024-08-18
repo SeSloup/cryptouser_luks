@@ -15,12 +15,14 @@
 [подготовим инфраструктуру (создадим пользователя)](https://github.com/SeSloup/cryptouser_luks/blob/main/commnds_ecryptfs)
 
 `шифруем папку пользователя`
-![01](https://github.com/SeSloup/cryptouser_luks/blob/main/screens/ecryptfs/01.png)
+![01](https://github.com/SeSloup/cryptouser_luks/blob/main/screens/ecryptfs/01.png)  
 
 `файлы до`
-![03](https://github.com/SeSloup/cryptouser_luks/blob/main/screens/ecryptfs/03.png)
+![03](https://github.com/SeSloup/cryptouser_luks/blob/main/screens/ecryptfs/03.png  
+
 `файлы после`
-![06](https://github.com/SeSloup/cryptouser_luks/blob/main/screens/ecryptfs/06.png)
+![06](https://github.com/SeSloup/cryptouser_luks/blob/main/screens/ecryptfs/06.png)  
+
 
 [полный ход шифрования](https://github.com/SeSloup/cryptouser_luks/tree/main/screens/ecryptfs)
 
